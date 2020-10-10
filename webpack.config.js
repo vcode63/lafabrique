@@ -34,18 +34,26 @@ module.exports = {
                 })
             },
             {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'css/',
-                            publicPath: 'css/'
-                        }
-                    }
-                ]
+                test: /\.css$/i,
+                loader: 'css-loader',
+                options: {
+                    modules: true,
+                },
             },
+
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'css/',
+            //                 publicPath: 'css/'
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.pug$/,
                 use: ['html-loader',
