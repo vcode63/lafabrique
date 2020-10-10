@@ -1,0 +1,16 @@
+doctype
+html
+    head
+        title= 'Webpack Flow PUG+SASS'
+        meta(charset="utf8")
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        block stylesheets
+    body
+        h1 WEBPACK PUG SASS
+        div
+          img(src="img/webpack-logo.png", alt="Webpack")
+        button#randomInt A random integer
+        button#randomRange A random integer in a range
+        p#outputParagraph You can't see this all the time
+        include templates/one.pug
